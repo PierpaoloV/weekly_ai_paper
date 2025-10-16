@@ -3,3 +3,4 @@ feedparser
 python-dateutil
 pyyaml
 openai
+pandas
