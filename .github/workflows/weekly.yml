@@ -1,5 +1,6 @@
 name: Weekly AI Pathology Digest
-
+permissions:
+  contents: write
 on:
   schedule:
     # Runs every Monday at 08:00 UTC
