@@ -31,3 +31,11 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: |
           python agent.py
+      - name: Commit updated sent_papers.json
+        run: |
+          git config --global user.name "AI Digest Bot"
+          git config --global user.email "bot@github.com"
+          git add sent_papers.json
+          git commit -m "Update sent papers list" || echo "No changes to commit"
+          git push
+
