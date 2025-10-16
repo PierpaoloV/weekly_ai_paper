@@ -1,0 +1,49 @@
+email:
+  from: "CPATH paper agent <pierpaolo.vendittelli93@gmail.com>"
+  to: ["pierpaolo.vendittelli@radboudumc.nl"]
+  subject: "Weekly AI in (Computational) Pathology — Highlights"
+  send_via: "gmail"   # or "smtp"
+  gmail_user_env: "GMAIL_USER"
+  gmail_app_password_env: "GMAIL_APP_PASSWORD"
+
+search:
+  days_back: 7
+  max_results: 40
+  keywords_any:
+    - "computational pathology"
+    - "digital pathology"
+    - "whole slide image"
+    - "WSI"
+    - "histopathology"
+    - "pathology foundation model"
+    - "self-supervised"
+    - "weakly supervised"
+    - "multiple instance learning"
+    - "MIL"
+    - "CLAM"
+    - "mitosis detection"
+    - "HoVer-Net"
+    - "survival"
+    - "pancreatic cancer"
+    - "Wilms Tumor"
+    - "Kidney"
+    - "subtyping"
+    - "classification"
+    - "anaplasia"
+    - "Segmentation"
+    - "PDAC"
+  boost_terms:
+    - "foundation model"
+    - "multimodal"
+    - "self-supervised"
+    - "weakly supervised"
+    - "whole-slide"
+    - "WSI"
+    - "survival"
+    - "detection"
+    - "fully supervised"
+    - "anaplasia"
+    - "MIL"
+    - "interpretability"
+  block_terms:
+    - "veterinary"
