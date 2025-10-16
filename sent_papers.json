@@ -1,1 +1,22 @@
-[]
+[
+  "10.1001/jamaoncol.2025.4072",
+  "10.1007/s10278-025-01687-0",
+  "10.1182/blood.2025031469",
+  "a text-image fusion method with data augmentation capabilities for referring medical image segmentation",
+  "approximate bilevel graph structure learning for histopathology image classification",
+  "boosting generic semi-supervised medical image segmentation via diverse teaching and label propagation",
+  "calibration and uncertainty for multirater volume assessment in multiorgan segmentation (curvas) challenge results",
+  "dpl: spatial-conditioned diffusion prototype enhancement for one-shot medical segmentation",
+  "efficient fine-tuning of dinov3 pretrained on natural images for atypical mitotic figure classification (midog 2025 task 2 winner)",
+  "evaluating the explainability of vision transformers in medical imaging",
+  "hybrid explanation-guided learning for transformer-based chest x-ray diagnosis",
+  "j-ras: enhancing medical image segmentation via retrieval-augmented joint training",
+  "mammodino: anatomically aware self-supervision for mammographic images",
+  "multiplicative loss for enhancing semantic segmentation in medical and cellular images",
+  "pathology-cot: learning visual chain-of-thought agent from expert whole slide image diagnosis behavior",
+  "software system for low-cost, gui-based microscopy segmentation: algorithmic implementation",
+  "spade: spatial transcriptomics and pathology alignment using a mixture of data experts for an expressive latent space",
+  "spherical radiomics - a novel approach to glioblastoma radiogenomic analysis of heterogeneity",
+  "st2he: a cross-platform framework for virtual histology and annotation of high-resolution spatial transcriptomics data",
+  "uncertainty-supervised interpretable and robust evidential segmentation"
+]
