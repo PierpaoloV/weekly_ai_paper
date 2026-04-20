@@ -431,8 +431,18 @@ def main():
     combined_a = reviews_a + candidate_pool
     combined_b = reviews_b + candidate_pool
 
+    # Pre-filter for editor: all papers above threshold, at least min_papers
+    threshold = cfg.get("editor", {}).get("score_threshold", 5.0)
+    min_papers = cfg.get("editor", {}).get("min_papers", 30)
+    sorted_a = sorted(combined_a, key=lambda x: x.get("reviewer_a_combined_score", 0), reverse=True)
+    sorted_b = sorted(combined_b, key=lambda x: x.get("reviewer_b_combined_score", 0), reverse=True)
+    above = sum(1 for p in sorted_a if p.get("reviewer_a_combined_score", 0) >= threshold)
+    n_editor = max(min_papers, above)
+    editor_a, editor_b = sorted_a[:n_editor], sorted_b[:n_editor]
+    print(f"Passing {n_editor} papers to editor ({above} above threshold {threshold}, floor {min_papers}).")
+
     # Editor — arbitration across this week + pool
-    final_picks = editorial_review(combined_a, combined_b, profile)
+    final_picks = editorial_review(editor_a, editor_b, profile)
 
     if not final_picks:
         print("⚠️ Editorial review returned no papers — falling back to Reviewer A scores.")

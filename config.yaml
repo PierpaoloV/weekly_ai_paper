@@ -56,3 +56,7 @@ search:
     - "interpretability"
   block_terms:
     - "veterinary"
+
+editor:
+  score_threshold: 6.0   # papers above this score are passed to the editor
+  min_papers: 30         # floor: always pass at least this many (top by score)
