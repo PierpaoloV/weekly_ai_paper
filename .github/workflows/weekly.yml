@@ -3,7 +3,8 @@ permissions:
   contents: write
 on:
   schedule:
-    # Runs every Monday at 08:00 UTC
+    # Keep this in sync with schedule.cron_utc in config.yaml.
+    # To change the time: update both this line and config.yaml.
     - cron: "0 8 * * MON"
   workflow_dispatch:  # allows manual trigger from the Actions tab
 
@@ -25,18 +26,25 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Write researcher profile
+        env:
+          RESEARCHER_PROFILE: ${{ secrets.RESEARCHER_PROFILE }}
+        run: echo "$RESEARCHER_PROFILE" > researcher_profile.md
+
       - name: Run AI Digest Agent
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
         run: |
           python agent.py
       - name: Commit updated sent_papers.json
         run: |
           git config --global user.name "AI Digest Bot"
           git config --global user.email "bot@github.com"
-          git add sent_papers.json
-          git commit -m "Update sent papers list" || echo "No changes to commit"
+          git add sent_papers.json candidate_pool.json sent_papers_log.csv
+          git commit -m "Update sent papers, candidate pool and log" || echo "No changes to commit"
           git push
 

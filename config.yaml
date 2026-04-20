@@ -1,8 +1,17 @@
+schedule:
+  # Day and local time you want to receive the digest.
+  # After changing these, update the cron expression in .github/workflows/weekly.yml to match.
+  # Use https://crontab.guru to convert your local time to UTC (GitHub Actions runs in UTC).
+  day: "Monday"
+  time: "08:00"
+  timezone: "Europe/Amsterdam"
+  cron_utc: "0 8 * * MON"   # current value — keep in sync with weekly.yml
+
 email:
-  from: "CPATH paper agent <pierpaolo.vendittelli93@gmail.com>"
-  to: ["pierpaolo.vendittelli@radboudumc.nl"]
-  subject: "Weekly AI in (Computational) Pathology — Highlights"
-  send_via: "gmail"   # or "smtp"
+  from_env: "EMAIL_FROM"         # e.g. "My Agent <you@gmail.com>"
+  to_env: "EMAIL_TO"             # comma-separated if multiple: "a@x.com,b@x.com"
+  subject: "Weekly AI Paper Digest — Highlights"
+  send_via: "gmail"              # or "smtp"
   gmail_user_env: "GMAIL_USER"
   gmail_app_password_env: "GMAIL_APP_PASSWORD"
 
