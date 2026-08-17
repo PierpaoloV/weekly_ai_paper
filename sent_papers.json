@@ -80,6 +80,7 @@
   "10.1038/s41746-025-02163-3",
   "10.1053/j.gastro.2026.02.048",
   "10.1080/0886022x.2026.2613606",
+  "10.1080/1120009x.2026.2717469",
   "10.1080/15548627.2026.2676079",
   "10.1093/ajcp/aqag037",
   "10.1093/carcin/bgaf074",
@@ -213,6 +214,7 @@
   "causal-sam-llm: large language models as causal reasoners for robust medical segmentation",
   "chronological contrastive learning: few-shot progression assessment in irreversible diseases",
   "circle representation for medical instance object segmentation",
+  "class activation mapping in explainable computer vision: a method-centered review of cnn, transformer, and foundation-model-era visual explanations",
   "classification of chest xray diseases through image processing and analysis techniques",
   "clear: causal learning framework for robust histopathology tumor detection under out-of-distribution shifts",
   "clinical-injection transformer with domain-adapted mae for lupus nephritis prognosis prediction",
@@ -563,6 +565,7 @@
   "textslip: text self-supervised clip for medical report generation",
   "the geometry of transfer: unlocking medical vision manifolds for training-free model ranking",
   "the impact of lesion focus on the performance of ai-based melanoma classification",
+  "thinking in scales: accelerating gigapixel pathology image analysis via adaptive continuous reasoning",
   "ticon: a slide-level tile contextualizer for histopathology representation learning",
   "topology-driven fusion of nnu-net and mednext for accurate brain tumor segmentation on sub-saharan africa dataset",
   "topology-guaranteed image segmentation: enforcing connectivity, genus, and width constraints",
@@ -616,5 +619,6 @@
   "when unsupervised domain adaptation meets one-class anomaly detection: addressing the two-fold unsupervised curse by leveraging anomaly scarcity",
   "who does your algorithm fail? investigating age and ethnic bias in the mama-mia dataset",
   "why invariance is not enough for biomedical domain generalization and how to fix it",
-  "wildfire spread scenarios: increasing sample diversity of segmentation diffusion models with training-free methods"
+  "wildfire spread scenarios: increasing sample diversity of segmentation diffusion models with training-free methods",
+  "xtralight-medmamba for classification of neoplastic tubular adenomas"
 ]
